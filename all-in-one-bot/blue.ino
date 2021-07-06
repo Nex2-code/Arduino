@@ -1,0 +1,47 @@
+void blue()
+{
+  while (true)
+  {
+    if(Serial.available()>0)
+    {
+      data=Serial.read();
+      Serial.print("data:");
+      Serial.print(data);
+      if(data=='1')
+      {
+        digitalWrite(8,HIGH);
+        digitalWrite(9,LOW);
+        digitalWrite(10,HIGH);
+        digitalWrite(11,LOW);
+      }
+    if(data=='2')
+      {
+        digitalWrite(8,HIGH);
+        digitalWrite(9,LOW);
+        digitalWrite(10,LOW);
+        digitalWrite(11,LOW);
+      }
+    if(data=='3')
+      {
+        digitalWrite(8,LOW);
+        digitalWrite(9,LOW);
+        digitalWrite(10,HIGH);
+        digitalWrite(11,LOW);
+      }
+      if(data=='4')
+      {
+        digitalWrite(8,LOW);
+        digitalWrite(9,LOW);
+        digitalWrite(10,LOW);
+        digitalWrite(11,LOW);
+      }
+      if(data=='5')
+      {
+        digitalWrite(8,LOW);
+        digitalWrite(9,HIGH);
+        digitalWrite(10,LOW);
+        digitalWrite(11,HIGH);
+      }
+    }
+  }
+}
